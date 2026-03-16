@@ -1,60 +1,77 @@
 body {
     margin: 0;
-    padding: 0;
-    background-color: #e8f5e9;
-    font-family: 'Courier New', Courier, monospace;
-    color: #1a3316;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+    font-family: sans-serif;
 }
 
-header {
-    background-color: #2d5a27;
-    color: white;
-    padding: 20px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-h1 {
-    margin: 0;
-    font-size: 32px;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    margin: 5px 0 0;
-    color: #aed581;
-}
-
-#game-wrapper {
-    margin: 40px auto;
-    width: 1000px;
-    height: 600px;
-    border: 8px solid #1b3617;
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+#game-container {
+    width: 600px;
+    height: 200px;
+    border-bottom: 2px solid white;
+    background: #333;
+    position: relative;
     overflow: hidden;
-    background-color: #000;
 }
 
-canvas {
-    display: block;
-    outline: none;
-}
-
-footer {
-    background-color: #1b3617;
-    color: #fff;
-    padding: 20px;
-    position: fixed;
+#player {
+    width: 40px;
+    height: 40px;
+    background: cyan;
+    position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 50px;
 }
 
-.controls span {
-    background: #2d5a27;
-    padding: 4px 10px;
-    margin: 0 3px;
-    border-radius: 4px;
-    border: 1px solid #4caf50;
+#obstacle {
+    width: 20px;
+    height: 40px;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+}
+
+#start-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background: cyan;
+    border: none;
     font-weight: bold;
+}
+
+.jump {
+    animation: jump-anim 0.5s linear;
+}
+
+@keyframes jump-anim {
+    0% { bottom: 0; }
+    30% { bottom: 100px; }
+    70% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
 }

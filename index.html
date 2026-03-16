@@ -3,40 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chikorita Universe | Official</title>
+    <title>Hurdle Bounce</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Chikorita Universe</h1>
-        <p class="subtitle">The Ultimate Pokémon Parkour Experience</p>
-    </header>
-
-    <main id="layout">
-        <div id="game-wrapper">
-            <canvas id="pm-game" width="1000" height="600" tabindex="0"></canvas>
-        </div>
+    <div id="game-container">
+        <div id="player"></div>
+        <div id="obstacle"></div>
+        <div id="score">Score: 0</div>
         
-        <div id="sidebar">
-            <div id="leaderboard">
-                <h3>TOP TRAINERS</h3>
-                <ul id="score-list">
-                    <li>No scores yet!</li>
-                </ul>
-            </div>
-            <button id="music-btn">🎵 Play Music</button>
+        <div id="start-menu">
+            <h1>Hurdle Bounce</h1>
+            <button id="startButton">START GAME</button>
         </div>
-    </main>
+    </div>
 
     <audio id="bgm" loop>
-    <source src="Absol's%20Hurdle%20Bounce.mp3" type="audio/mpeg">
-</audio>>
+        <source src="Absol's%20Hurdle%20Bounce.mp3" type="audio/mpeg">
+    </audio>
 
-    <footer>
-        <div class="controls">
-            <span>Arrows</span> Move | <span>Space</span> Jump | <span>Shift</span> Gun | <span>1</span> Shoot | <span>B</span> Shop | <span>C</span> Chikorita
-        </div>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
